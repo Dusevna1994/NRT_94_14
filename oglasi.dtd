@@ -1,0 +1,10 @@
+<!ELEMENT oglasiLista (oglas+)>
+<!ELEMENT oglas (kategorija,datumIsteka,cena,#PCDATA,oznaka*,email+)>
+<!ELEMENT kategorija (#PCDATA)>
+<!ELEMENT datumIsteka (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+<!ELEMENT oznaka (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ATTLIST cena valuta (rsd|eur) "rsd">
+<!ATTLIST email tip (privatni|sluzbeni) #REQUIRED>
