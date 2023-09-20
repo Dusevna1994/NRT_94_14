@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE oglasiLista SYSTEM 'oglasi.dtd'>
+<!DOCTYPE oglasiLista SYSTEM "oglasi.dtd">
 <oglasiLista>
 	<oglas>
 		<kategorija></kategorija>
 		<datumIsteka></datumIsteka>
-		<cena valuta="din"></cena>
+		<cena valuta="eur"></cena>
+		<tekst></tekst>
 		<oznaka></oznaka>
-		<email></email>
+		<email tip="privatni"></email>
 	</oglas>
 	<oglas>
 		<kategorija></kategorija>
 		<datumIsteka></datumIsteka>
-		<cena valuta="din"></cena>
+		<cena valuta="rsd"></cena>
+		<tekst></tekst>
 		<oznaka></oznaka>
-		<email></email>
+		<email tip="privatni"></email>
 	</oglas>
 	<oglas>
 		<kategorija></kategorija>
 		<datumIsteka></datumIsteka>
-		<cena valuta="din"></cena>
+		<cena valuta="rsd"></cena>
+		<tekst></tekst>
 		<oznaka></oznaka>
-		<email></email>
+		<email tip="sluzbeni"></email>
 	</oglas>
 </oglasiLista>
