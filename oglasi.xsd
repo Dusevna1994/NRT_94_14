@@ -1,0 +1,87 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="https://www.viser.edu.rs"
+xmlns="https://www.viser.edu.rs"
+elementFormDefault="qualified">
+   <xs:element name="oglasiLista">
+      <xs:complexType>
+	 <xs:sequence>
+	     <xs:element name="oglas" minOccurs="0" maxOccurs="unbounded">
+		<xs:complexType>
+		   <xs:sequence>
+		      <xs:element name="kategorija">
+			 <xs:simpleType>
+		            <xs:restriction base="xs:string">
+				<xs:enumeration value="Automobili"/>
+				<xs:enumeration value="Stanovi"/>
+				<xs:enumeration value="Alati"/>
+				<xs:enumeration value="Odeca"/>
+				<xs:enumeration value="Audio i video oprema"/>
+				<xs:enumeration value="Konzole i igrice"/>
+				<xs:enumeration value="Kompjuteri i delovi"/>
+			    </xs:restriction>
+		         </xs:simpleType>
+		      </xs:element>
+		      <xs:element name="datumIsteka" type="xs:date"/>
+		      <xs:element name="cena">
+			<xs:complexType>
+			   <xs:simpleContent>
+			       <xs:extension base="pozitivanBroj">
+				  <xs:attribute name="valuta" use="required">
+				     <xs:simpleContent>
+					<xs:extension base="valuteIzbor">
+					</xs:extension>
+				     </xs:simpleContent>
+				  </xs:attribute>
+			       </xs:extension>
+			   </xs:simpleContent>
+	 		</xs:complexType>
+		      </xs:element>
+		      <xs:element name="tekst">
+			<xs:simpleType>
+			   <xs:restriction base="xs:string">
+			       <xs:minLength value="10"/>
+			       </xs:maxLength value="180"/>
+			   </xs:restriction>
+			</xs:simpleType>
+		      </xs:element>
+		      <xs:element name="oznaka" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+		      <xs:element name="email" minOccurs="1" maxOccurs="unbounded">
+			 <xs:complexType>
+			    <xs:simpleContent>
+			       <xs:extension base="emailFormatiranje">
+				   <xs:attribute name="tip" use="required">
+					<xs:simpleType>
+					   <xs:restriction base="xs:string">
+					      <xs:enumeration value="privatni"/>
+					      <xs:enumeration value="sluzbeni"/>
+					   </xs:restriction>
+					</xs:simpleType>
+				   </xs:attribute>
+			       </xs:extension>
+			    </xs:simpleContent>
+			 </xs:complexType>
+		      </xs:element>
+		   </xs:sequence>
+	        </xs:complexType>
+	     </xs:element>
+	 </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+			   <!--EKSTENZIJE KOJE KASNIJE UBACUJEM GDE JE POTREBNO-->
+   <xs:simpleType name="pozitivanBroj">
+	<xs:restriction base="xs:double">
+           <xs:minInclusive value="0"/>
+	</xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="valuteIzbor">
+	<xs:restriction base="xs:string">
+	   <xs:enumeration value="rsd"/>
+	   <xs:enumeration value="eur"/>
+	</xs:restriction>
+   </xs:simpleType>
+   <xs:simpleType name="emailFormatiranje">
+     <xs:restriction base="xs:string">
+	<xs:pattern value="[a-zA-Z][a-zA-Z\d.-]*[^./\@|-]@[^./\@|-][a-zA-Z\d.-][^./\@|-]*[.][a-zA-Z]{2,3}[.a-zA-Z]{0,4}"/>
+     </xs:restriction>
+   </xs:simpleType>
+</xs:schema>
