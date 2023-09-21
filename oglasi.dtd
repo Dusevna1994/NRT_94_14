@@ -7,5 +7,8 @@
 <!ELEMENT oznaka (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 
+<!ATTLIST oglasiLista xsi:schemaLocation CDATA #REQUIRED
+		      xmlns CDATA #REQUIRED
+		      xmlns:xsi CDATA #REQUIRED>
 <!ATTLIST cena valuta (rsd|eur) "rsd">
 <!ATTLIST email tip (privatni|sluzbeni) #REQUIRED>
