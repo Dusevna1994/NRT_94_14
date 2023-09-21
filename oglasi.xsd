@@ -27,10 +27,12 @@ elementFormDefault="qualified">
 			   <xs:simpleContent>
 			       <xs:extension base="pozitivanBroj">
 				  <xs:attribute name="valuta" use="required">
-				     <xs:simpleContent>
-					<xs:extension base="valuteIzbor">
-					</xs:extension>
-				     </xs:simpleContent>
+				     <xs:simpleType>
+					<xs:restriction base="xs:string">
+	 				  <xs:enumeration value="rsd"/>
+	 				  <xs:enumeration value="eur"/>
+			        	</xs:restriction>
+				     </xs:simpleType>
 				  </xs:attribute>
 			       </xs:extension>
 			   </xs:simpleContent>
@@ -40,7 +42,7 @@ elementFormDefault="qualified">
 			<xs:simpleType>
 			   <xs:restriction base="xs:string">
 			       <xs:minLength value="10"/>
-			       </xs:maxLength value="180"/>
+			       <xs:maxLength value="180"/>
 			   </xs:restriction>
 			</xs:simpleType>
 		      </xs:element>
@@ -73,15 +75,9 @@ elementFormDefault="qualified">
            <xs:minInclusive value="0"/>
 	</xs:restriction>
    </xs:simpleType>
-   <xs:simpleType name="valuteIzbor">
-	<xs:restriction base="xs:string">
-	   <xs:enumeration value="rsd"/>
-	   <xs:enumeration value="eur"/>
-	</xs:restriction>
-   </xs:simpleType>
    <xs:simpleType name="emailFormatiranje">
      <xs:restriction base="xs:string">
-	<xs:pattern value="[a-zA-Z][a-zA-Z\d.-]*[^./\@|-]@[^./\@|-][a-zA-Z\d.-][^./\@|-]*[.][a-zA-Z]{2,3}[.a-zA-Z]{0,4}"/>
+	<xs:pattern value="[^@].*@[^.].*[.].{1}.*"/>
      </xs:restriction>
    </xs:simpleType>
 </xs:schema>
