@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE oglasiLista SYSTEM "oglasi.dtd">
+<oglasiLista xmlns="https://www.viser.edu.rs"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.viser.edu.rs oglasi.xsd">
+	<oglas>
+		<kategorija>Automobili</kategorija>
+		<datumIsteka>2023-09-21</datumIsteka>
+		<cena valuta="eur">700</cena>
+		<tekst>Polovan automobil opel astra g (2000god.), u dobrom stanju, vlasnik licno..</tekst>
+		<oznaka>Polovno</oznaka>
+		<email tip="privatni">nikola94bgd@gmail.com</email>
+	</oglas>
+	<oglas>
+		<kategorija>Odeca</kategorija>
+		<datumIsteka>2023-11-30</datumIsteka>
+		<cena valuta="rsd">40000</cena>
+		<tekst>Jakna nova,ne koriscena za skijanje, Colmar</tekst>
+		<oznaka>Novo</oznaka>
+		<email tip="sluzbeni">jakne-colmar@addr.com</email>
+		<email tip="privatni">prodavac123@addr.com</email>
+	</oglas>
+	<oglas>
+		<kategorija>Alati</kategorija>
+		<datumIsteka>2024-01-02</datumIsteka>
+		<cena valuta="rsd">25000</cena>
+		<tekst>Set gedora kljuceva, novo ne korisceno</tekst>
+		<oznaka>Novo</oznaka>
+		<email tip="privatni">herZikaPavlovic@burence.com</email>
+	</oglas>
+</oglasiLista>

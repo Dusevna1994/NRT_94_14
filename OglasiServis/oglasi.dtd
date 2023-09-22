@@ -1,0 +1,14 @@
+<!ELEMENT oglasiLista (oglas*)>
+<!ELEMENT oglas (kategorija,datumIsteka,cena,tekst,oznaka*,email+)>
+<!ELEMENT kategorija (#PCDATA)>
+<!ELEMENT datumIsteka (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+<!ELEMENT tekst (#PCDATA)>
+<!ELEMENT oznaka (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ATTLIST oglasiLista xsi:schemaLocation CDATA #REQUIRED
+		      xmlns CDATA #REQUIRED
+		      xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST cena valuta (rsd|eur) "rsd">
+<!ATTLIST email tip (privatni|sluzbeni) #REQUIRED>

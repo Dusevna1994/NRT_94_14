@@ -1,6 +1,12 @@
 {
+  "scripts":{
+    "devStart": "nodemon index.js"  
+  },
   "dependencies": {
     "express": "^4.18.2",
     "radsaoglasimamodul": "file:..\\RadSaOglasiMamodul"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
